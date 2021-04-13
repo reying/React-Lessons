@@ -27,7 +27,7 @@ const FeaturesSliderArrow = (props)=>(
     </button>
 );
 
-const RenderJSX =()=> (
+const App =()=> (
     <div>
         <header>
             <div className="wrapper">
@@ -60,10 +60,10 @@ const RenderJSX =()=> (
                     </div>
                     <div className="features-slider">
                         <div className="features-slider_items">
-                            <FeaturesSliderItem url="url(./images/1.svg)" text="Первое целевое преимущество"/>
-                            <FeaturesSliderItem url="url(./images/2.svg)" text="Второе целевое преимущество"/>
-                            <FeaturesSliderItem url="url(./images/3.svg)" text="Третье целевое преимущество"/>
-                            <FeaturesSliderItem url="url(./images/4.svg)" text="Четвертое целевое преимущество"/>
+                            <FeaturesSliderItem url="url(/images/1.svg)" text="Первое целевое преимущество"/>
+                            <FeaturesSliderItem url="url(/images/2.svg)" text="Второе целевое преимущество"/>
+                            <FeaturesSliderItem url="url(/images/3.svg)" text="Третье целевое преимущество"/>
+                            <FeaturesSliderItem url="url(/images/4.svg)" text="Четвертое целевое преимущество"/>
                         </div>
                         <FeaturesSliderArrow nameClass="features-slider-prev"/>
                         <FeaturesSliderArrow nameClass="features-slider-next"/>
@@ -100,4 +100,6 @@ const RenderJSX =()=> (
     </div>
 );
 
-ReactDOM.render(<RenderJSX/>, document.getElementById('root'));
+export default App;
+
+// ReactDOM.render(<RenderJSX/>, document.getElementById('root'));
