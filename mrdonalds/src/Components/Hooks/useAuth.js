@@ -13,14 +13,13 @@ export function useAuth(authFirebase) {
 
   useEffect(() => {
     auth.onAuthStateChanged(user => {
-      console.log(user);
       if (user) {
         setAuthentication(user);
       } else {
         setAuthentication(null);
       }
     });
-  }, [authentification]);
+  }, [auth, authentification]);
 
   return { authentification, logIn, logOut };
 }
