@@ -10,7 +10,7 @@ const ToppingWrap = styled.div`
 
 const ToppingLabel = styled.label`
   display: block;
-  
+  cursor: pointer;
 `;
 
 const ToppingCheckbox = styled.input`
