@@ -108,7 +108,7 @@ export const ModalItem = ({ openItem, setOpenItem, orders, setOrders }) => {
           <ButtonCheckout 
             onClick={isEdit ? editOrder : addToOrder}
             disabled={order.choices && !order.choice}
-            >Добавить</ButtonCheckout>
+            >{isEdit ? 'Редактировать' : 'Добавить'}</ButtonCheckout>
         </Content>
       </Modal>
     </Overlay>
