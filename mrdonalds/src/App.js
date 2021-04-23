@@ -32,7 +32,7 @@ function App() {
   const openItem = useOpenItem();
   const orders = useOrders();
   const orderConfirm = useOrderConfirm();
-  const firebaseDatabase = firebase.database;
+  // const firebaseDatabase = firebase.database;
 
   useTitle(openItem.openItem);
 
@@ -42,15 +42,14 @@ function App() {
       openItem,
       orders,
       orderConfirm,
-      firebaseDatabase
+      firebaseDatabase: firebase.database
     }}>
       <GlobalStyle/>
       <NavBar/>
       <Order/>
       <Menu/>
       { openItem.openItem && <ModalItem/> }
-      {orderConfirm.openOrderConfirm &&
-        <OrderConfirm/>}
+      { orderConfirm.openOrderConfirm && <OrderConfirm/> }
     </Context.Provider>
   );
 }

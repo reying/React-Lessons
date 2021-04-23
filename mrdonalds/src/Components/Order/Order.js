@@ -36,8 +36,7 @@ export const Order = () => {
   const {
     orders: { orders, setOrders },
     auth: {authentification, logIn},
-    orderConfirm: {setOpenOrderConfirm},
-    openItem: {setOpenItem}
+    orderConfirm: {setOpenOrderConfirm}
   } = useContext(Context);
   const deleteItem = index => {
     const newOrders = orders.filter((item, i) => index !== i);
@@ -59,7 +58,6 @@ export const Order = () => {
             order={order}
             deleteItem={deleteItem}
             index={index}
-            setOpenItem={setOpenItem}
           />)}
         </OrderList> :
         <EmptyList>Список заказов пуст</EmptyList>}
@@ -78,7 +76,7 @@ export const Order = () => {
             logIn()
           }
         }}>Оформить</ButtonCheckout>
-      </> : false}
+      </> : null}
     </OrderStyled>
   )
 };

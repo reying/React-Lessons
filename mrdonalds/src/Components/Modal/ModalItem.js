@@ -51,6 +51,7 @@ export const ModalItem = () => {
     openItem: { openItem, setOpenItem },
     orders: { orders, setOrders }
   } = useContext(Context);
+  
   const counter = useCount(openItem.count);
   const toppings = useToppings(openItem);
   const choices = useChoices(openItem);
