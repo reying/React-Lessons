@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { ListItem } from './ListItem';
 import { Banner } from './Banner';
-import { useFetch } from '../Hooks/useFetch';
-import preloaderImg from '../../image/preloader.svg';
+// import { useFetch } from '../Hooks/useFetch';
+// import preloaderImg from '../../image/preloader.svg';
 
 const MenuStyled = styled.main`
   background-color: #ccc;
@@ -15,23 +15,22 @@ const SectionMenu = styled.section`
   padding: 30px;
 `;
 
-const Preloader = styled.img`
-  display: flex;
-  width: 35%;
-  margin-left: auto;
-  margin-right: auto;
-`;
+// const Preloader = styled.img`
+//   display: flex;
+//   width: 35%;
+//   margin-left: auto;
+//   margin-right: auto;
+// `;
 
-export const Menu = ({ setOpenItem }) => {
+export const Menu = ({ setOpenItem, dbMenu }) => {
 
-  const res = useFetch();
-
-  const dbMenu = res.response;
+  // const res = useFetch();
+  // const dbMenu = res.response;
 
   return (
     <MenuStyled>
       <Banner/>
-      {res.response ?
+      {dbMenu ?
       <>
         <SectionMenu>
           <h2>Бургеры</h2>
@@ -47,8 +46,7 @@ export const Menu = ({ setOpenItem }) => {
             setOpenItem={setOpenItem}
           />
         </SectionMenu>
-      </> : res.error ?
-      <Preloader src={preloaderImg} alt='прелоадер'/> :
+      </> :
       <div>Loading...</div>
       }
     </MenuStyled>
